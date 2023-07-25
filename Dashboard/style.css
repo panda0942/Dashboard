@@ -1,0 +1,747 @@
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+     box-sizing: border-box; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* Define the font family and its source */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+}
+
+/* Apply the font family to an element */
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+html{
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%237731FF'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='300' height='250' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
+
+
+}
+
+.Body{
+    background-color: rgb(214, 208, 208);
+   }
+.page-slice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 80%;
+}
+.menu-list{
+    position: fixed;
+    height: 600px;
+    left: 0;
+    width: 270px;
+    z-index: 1;
+    background-color: rgba(237, 220, 220, 0.845);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius:20px ;
+}
+.dashboard{
+    position: relative;
+    left:270px;
+    top: 130px;
+    /* width: 100%; */
+    width: min(80%,79.2vw);
+    height: 1120px;
+    /* background-color: rgb(214, 208, 208); */
+    background-color: transparent;
+}
+
+.Section-card{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.6vw;
+    height: 150px;
+    width: 200px;
+    background-color: rgb(4, 4, 124);
+    background-image: linear-gradient(rgb(4, 4, 124),rgb(210, 205, 197));
+    /* text-align: center; */
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(210, 205, 197); 
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    gap: 1.5vw;
+    border-radius: 10px;
+    padding: 15px;
+}
+.align-cardwords{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 14px;
+    color: aliceblue;
+}
+.doc-button{
+position: relative;
+background-color: rgb(249, 249, 249);
+padding: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-style: solid;
+border-width: 2px;
+border-color: rgb(210, 205, 197);
+border-radius: 5px;
+font-weight: 600;
+width: 100%;
+color: rgb(52, 51, 51);
+    
+}
+.AllOptions{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0vw;
+    padding: 1px;
+    width: 15vw;
+    height: 30px;
+    position: relative;
+    right: 5px;
+}
+.AllOptions:hover{
+    
+    background-color: rgb(214, 208, 208);
+    cursor: pointer;
+    width: 15vw;
+    height: 30px;
+    position: relative;
+    right: 0px;
+    /* height: 35px; */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    transform: scale(1.38);
+    color:  rgb(4, 4, 124);
+    
+
+}
+.Title{
+display:flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+margin-bottom: 12px;
+gap: 1vw;
+
+}
+.Mylist{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+    gap: 0.7vw;
+    font-size: 15px;
+    color: rgb(51, 49, 49);
+    font-weight: 300;
+}
+.BarImages{
+width: 32px;
+height: 32px;
+background-color:transparent;
+padding: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-style: solid;
+border-width: 2px;
+border-color: transparent;
+border-radius: 5px;
+}
+#Nextsection{
+    font-weight: 700;
+    color: rgb(84, 81, 81);
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:120px;
+}
+.rightHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   gap: 10px;
+   position: relative;
+   right: 20px;
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.infoCards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     justify-content: space-evenly;
+    width: 300px;
+    height: 80px;
+    padding: 5px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+}
+.infoCards:hover{
+transform: scale(1.1);
+
+}
+.Today{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    right: 10px;
+}
+.imgCard{
+width: 20%;
+height: 80%;
+border-radius: 3px;
+border-style: solid;
+border-width: 3px;
+border-color: transparent;
+background-color: rgb(4, 4, 124);
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+position: relative;
+left: 10px;
+}
+.alignrow1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+.alignrow2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 1vw;
+}
+.rocketSection{
+    width: 60%;
+    height: 230px;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+
+}
+.rocketSection:hover{
+    transform: scale(1.1);
+}
+.workSection{
+    width:40%;
+    height: 230px;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+}
+.workSection:hover{
+    transform: scale(1.1);
+}
+.workdescript{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: left;
+    color: rgb(214, 213, 213);
+    padding: 10px;
+    background-color: rgb(0, 0, 114);
+    border-radius: 3px;
+}
+.alignRocket{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 60%;
+}
+.read{
+   display: flex;
+   font-size: 40%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: left;
+}
+.rightRocket{
+    width: 70%;
+    background-color: rgb(4, 4, 124);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.shares{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.org{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sharesCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+.Ausers{
+position: relative;
+left: 40px;
+}
+.range{
+    width: 70%;
+    height: 10%;
+}
+.alignrow3{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.alignchart101{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+}
+
+.graphing{
+ width: 80%;
+ height: 80%;
+ background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+    padding: 10px;
+ gap: 30px;
+ display: flex;
+ flex-direction: column;
+
+}
+.graphing:hover{
+    transform: scale(1.01);
+}
+.charts{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.charts:hover{
+    transform: scale(1.02);
+}
+
+.charts2{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.charts2:hover{
+    transform: scale(1.02);
+}
+.BarWords{
+    font-weight: 500;
+}
+#pieChart{
+    width: 50%;
+}
+#chartContainer{
+    width: 100%;
+}
+.search{
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-color: rgb(210, 205, 197);
+    border-style: solid;
+    border-width: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.searchbox{
+    background-color: transparent;
+    border-style: none;
+    outline:none;
+    color: rgb(4, 4, 124);
+}
+.imageshead{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.firstsec{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+width: 50%;
+gap: 10px;
+}
+.secondsec{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
+    }
+
+#colorgrad::before {
+    /* Define the background gradient */
+    background-image: linear-gradient(to left,rgb(4, 4, 124),rgb(210, 205, 197));
+
+    /* Set the background-clip property to text */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Set the text-fill-color property to transparent, which allows the gradient to show through */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+#colorgrad2 {
+    /* Define the background gradient */
+    background-image: linear-gradient(to left,rgb(4, 4, 124),rgb(4, 4, 124),rgb(210, 205, 197));
+
+    /* Set the background-clip property to text */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Set the text-fill-color property to transparent, which allows the gradient to show through */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.graphPic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+.K1{
+    color: rgb(25, 125, 192);
+}
+.K2{
+    color: green;
+}
+.K3{
+    color: red;
+}
+.K4{
+    color: blue;
+}
+
+/* .Body{
+    background-image: url("Images/DashboardUI.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    ///////////////////////
+    glass-effect
+    background-color:#ffffff10;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    /////////////////////
+} */
+
+
+
+/* for tables */
+@media (max-width: 1000px) {
+    .menu-list{
+        display: none;
+    }
+
+
+    .dashboard {
+        
+    position: absolute;
+    left: 0;
+    top: -135px;
+    width: 125%;
+    padding: 10px;
+    height: 100%;
+
+    }
+
+    .alignchart101{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+
+.alignrow3{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+.charts{
+    width: 70%;
+    height: 40vw;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.charts:hover{
+    transform: scale(1.02);
+}
+
+.charts2{
+    width: 80%;
+    height: 40vw;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.charts2:hover{
+    transform: scale(1.02);
+}
+
+
+.alignrow1{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.firstsec{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    }
+    .secondsec{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        }
+  }
+  @media (max-width: 1350px) and (min-width:1000px){
+
+.alignrow3{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+}
+
+
+  }
+
+
+
+
+
+  
+
+      /* For mobile phones.... */
+  @media (max-width : 700px ){
+
+
+    .alignrow2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+    }
+    
+
+.rocketSection{
+    width: 90%;
+    height: 230px;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.workSection{
+    width:70%;
+    height: 230px;
+    background-color: rgba(255, 255, 255, 0.757);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(210, 205, 197);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+}
+
+
+.alignrow1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.firstsec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    }
+    .secondsec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        }
+
+        .infoCards{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+             justify-content: space-evenly;
+            width: 80%;
+            height: 120px;
+            padding: 5px;
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.757);
+            border-style: solid;
+            border-width: 5px;
+            border-color: rgb(210, 205, 197);
+            border-radius: 8px;
+        }
+  }
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
